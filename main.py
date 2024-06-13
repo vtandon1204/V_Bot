@@ -4,7 +4,7 @@ import keyboard
 import os
 import subprocess as sp
 import webbrowser
-import openai
+# import openai
 
 from datetime import datetime
 from decouple import config
@@ -74,6 +74,7 @@ def take_command():
         print("Recognizing...")
         queri = r.recognize_google(audio, language='en-in')
         print(queri)
+        # speak(queri)
         # this will all the commands given by the user
         if not 'stop' in queri or 'exit' in queri:
             speak(choice(random_text))
@@ -108,7 +109,7 @@ if __name__ == '__main__':
 
             websites = [["youtube", "https://www.youtube.com/"],
                         ["lms", "https://lms.thapar.edu/moodle/login/"],
-                        ["g.mail", "https://mail.google.com/mail/u/1/#inbox"],
+                        ["g mail", "https://mail.google.com/mail/u/1/#inbox"],
                         ["striver", "https://takeuforward.org/"],
                         ["github", "https://github.com/"],
                         ["lead code", "https://leetcode.com/problemset/"],
