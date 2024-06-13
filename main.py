@@ -76,7 +76,9 @@ def take_command():
         print(queri)
         # speak(queri)
         # this will all the commands given by the user
-        if not 'stop' in queri or 'exit' in queri:
+        if not 'stop' in queri or 'exit' in queri :
+            speak(choice(random_text))
+        elif 'open' in queri:
             speak(choice(random_text))
         else:
             hour = datetime.now().hour
