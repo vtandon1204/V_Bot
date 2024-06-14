@@ -4,8 +4,9 @@ import keyboard
 import os
 import subprocess as sp
 import webbrowser
-# import openai
+import openai
 
+from online import find_my_id, search_on_google, search_on_wikipedia, youtube
 from datetime import datetime
 from decouple import config
 from conv import random_text
@@ -76,7 +77,7 @@ def take_command():
         print(queri)
         # speak(queri)
         # this will all the commands given by the user
-        if not 'stop' in queri or 'exit' in queri :
+        if not 'stop' in queri or 'exit' in queri:
             speak(choice(random_text))
         elif 'open' in queri:
             speak(choice(random_text))
@@ -108,6 +109,29 @@ if __name__ == '__main__':
             elif "open camera" in query:
                 speak("Opening camera")
                 sp.run('start microsoft.windows.camera:', shell=True)
+
+            elif "IP address" in query:
+                ip_address = find_my_id()
+                speak(f"Your I.P address is {ip_address}")
+                print(f"Your I.P address is {ip_address}")
+
+            elif "play youtube" in query:
+                speak(f"What do you want to play on YouTube {USER}?")
+                video = take_command().lower()
+                youtube(video)
+
+            elif "open google" in query:
+                speak(f"What do you want to search on google {USER}?")
+                query = take_command().lower()
+                search_on_google(query)
+
+            elif "open wikipedia" in query:
+                speak(f"What do you want to search on wikipedia {USER}?")
+                search = take_command().lower()
+                result = search_on_wikipedia(search)
+                speak(f"According to wikipedia, {result}")
+                speak(f"i am printing on terminal")
+                print(result)
 
             websites = [["youtube", "https://www.youtube.com/"],
                         ["lms", "https://lms.thapar.edu/moodle/login/"],
