@@ -2,9 +2,9 @@
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue.svg) ![NLP](https://img.shields.io/badge/NLP-Natural%20Language%20Processing-brightgreen.svg) ![Pyttsx3](https://img.shields.io/badge/pyttsx3-Text%20to%20Speech-orange.svg)
 
-V_Bot is a voice-activated AI assistant that can handle your day-to-day tasks. From responding to voice commands to automating processes, V_Bot is designed to make life easier.
+V-Bot is a voice-activated AI assistant that can handle your day-to-day tasks. From responding to voice commands to automating processes, V-Bot is designed to make life easier.
 
-🚀 **Empower your desktop with V_Bot** and bring seamless task automation with speech recognition, NLP, and more!
+🚀 **Empower your desktop with V-Bot** and bring seamless task automation with speech recognition, NLP, and more!
 
 ---
 
